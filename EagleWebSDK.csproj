@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Templates\template-cs.txt" />
+    <None Remove="Templates\template-csproj.txt" />
+    <None Remove="Templates\template-native-cmake.txt" />
+    <None Remove="Templates\template-native-cpp.txt" />
+    <None Remove="Templates\template-native-h.txt" />
+    <None Remove="Templates\template-sln.txt" />
+    <None Remove="Templates\template-web-index.txt" />
+    <None Remove="Templates\template-web-main.txt" />
+    <None Remove="Templates\template-web-package.txt" />
+    <None Remove="Templates\template-web-tsconfig.txt" />
+    <None Remove="Templates\template-web-webpack.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="Templates\template-cs.txt" />
+    <EmbeddedResource Include="Templates\template-csproj.txt" />
+    <EmbeddedResource Include="Templates\template-native-cmake.txt" />
+    <EmbeddedResource Include="Templates\template-native-cpp.txt" />
+    <EmbeddedResource Include="Templates\template-native-h.txt" />
+    <EmbeddedResource Include="Templates\template-sln.txt" />
+    <EmbeddedResource Include="Templates\template-web-index.txt" />
+    <EmbeddedResource Include="Templates\template-web-main.txt" />
+    <EmbeddedResource Include="Templates\template-web-package.txt" />
+    <EmbeddedResource Include="Templates\template-web-tsconfig.txt" />
+    <EmbeddedResource Include="Templates\template-web-webpack.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
+    <PackageReference Include="System.Runtime" Version="4.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\EagleWeb\EagleWeb.Package\EagleWeb.Package.csproj" />
+    <ProjectReference Include="..\EasyCrossPlatform\LibEasyCrossPlatform\LibEasyCrossPlatform.csproj" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,11 @@
+﻿#pragma once
+
+#if defined(_MSC_VER)
+#define EXPORT_API extern "C" __declspec( dllexport )
+#elif defined(__GNUC__)
+#define EXPORT_API extern "C" __attribute__((visibility("default")))
+#else
+#define EXPORT_API extern "C"
+#endif
+
+// Put functions to export below. Begin them with "EXPORT_API".

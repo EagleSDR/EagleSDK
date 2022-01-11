@@ -1,0 +1,16 @@
+﻿import IEaglePluginContext from "../sdk/plugin/IEaglePluginContext";
+import EagleObject from "../sdk/web/EagleObject";
+import IEagleObjectContext from "../sdk/web/IEagleObjectContext";
+
+export default class PluginMain extends EagleObject {
+
+	constructor(plugin: IEaglePluginContext, context: IEagleObjectContext) {
+		super("PluginMain", context);
+		this.plugin = plugin;
+
+		//Put your initialization stuff in here.
+	}
+
+	plugin: IEaglePluginContext;
+
+}

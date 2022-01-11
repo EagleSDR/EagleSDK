@@ -1,0 +1,25 @@
+﻿using EagleWeb.Common;
+using EagleWeb.Common.IO;
+using EagleWeb.Common.Misc;
+using EagleWeb.Common.Plugin;
+using EagleWeb.Common.Radio;
+using Newtonsoft.Json.Linq;
+using System;
+using System.Collections.Generic;
+using System.Text;
+
+namespace %NAMESPACE%
+{
+    public class %CLASSNAME% : EagleObjectPlugin
+    {
+        public %CLASSNAME%(IEagleObjectPluginContext context) : base(context)
+        {
+            
+        }
+
+        public override void PluginInit()
+        {
+            //Do plugin init here
+        }
+    }
+}

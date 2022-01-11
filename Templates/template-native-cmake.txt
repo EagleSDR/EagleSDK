@@ -1,0 +1,21 @@
+﻿# Set up
+cmake_minimum_required (VERSION 3.8)
+project ("%NAME%")
+
+# Add files
+add_library (%NAME% SHARED "native.cpp" "native.h")
+
+# Find packages
+find_package(Volk CONFIG REQUIRED)
+find_package(raptordsp CONFIG REQUIRED)
+
+# Link to packages
+target_link_libraries(%NAME% PRIVATE raptordsp)
+
+# Prepare install target
+install(TARGETS %NAME%
+  LIBRARY DESTINATION lib
+  ARCHIVE DESTINATION lib
+  RUNTIME DESTINATION bin
+  INCLUDES DESTINATION include
+)
